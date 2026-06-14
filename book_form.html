@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書籍編集 – 書籍貸出管理</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container { max-width: 960px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">📚 書籍貸出管理</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="book_list.html">書籍一覧</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="login.html" class="btn btn-outline-light btn-sm">ログアウト</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4" style="max-width: 600px;">
+
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="book_list.html">書籍一覧</a></li>
+        <li class="breadcrumb-item active">書籍を編集</li>
+      </ol>
+    </nav>
+
+    <h1 class="h3 mb-4">書籍を編集</h1>
+    <!-- 追加時は「書籍を追加」に変わる想定 -->
+
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+
+        <div class="mb-3">
+          <label class="form-label" for="title">書籍名 <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="title" value="鬼滅の刃 (1)">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="author">著者 <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="author" value="吾峠 呼世晴">
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label" for="year">出版年</label>
+          <input type="number" class="form-control" id="year" value="2016" min="1900" max="2099">
+        </div>
+
+        <div class="d-flex gap-2">
+          <a href="book_list.html" class="btn btn-primary">保存する</a>
+          <a href="book_list.html" class="btn btn-outline-secondary">キャンセル</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 削除は編集時のみ表示 -->
+    <div class="mt-4 pt-3 border-top">
+      <p class="text-muted mb-2" style="font-size: 0.875rem;">この書籍を削除すると、貸出履歴も失われます。</p>
+      <button class="btn btn-outline-danger btn-sm"
+        onclick="return confirm('「鬼滅の刃 (1)」を削除しますか？')">
+        この書籍を削除する
+      </button>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 書籍貸出管理システム</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

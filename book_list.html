@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書籍一覧 – 書籍貸出管理</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container { max-width: 960px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">📚 書籍貸出管理</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="book_list.html">書籍一覧</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="login.html" class="btn btn-outline-light btn-sm">ログアウト</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="h3 mb-0">書籍一覧</h1>
+      <a href="book_form.html" class="btn btn-primary">＋ 書籍を追加</a>
+    </div>
+
+    <div class="input-group mb-4">
+      <input type="text" class="form-control" placeholder="書籍名、著者名で検索...">
+      <button class="btn btn-outline-secondary" type="button">検索</button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>書籍名</th>
+            <th>著者</th>
+            <th>出版年</th>
+            <th>状態</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <a href="book_form.html" class="text-decoration-none text-dark fw-semibold">鬼滅の刃 (1)</a>
+            </td>
+            <td>吾峠 呼世晴</td>
+            <td>2016</td>
+            <td><span class="badge bg-success">貸出可</span></td>
+            <td>
+              <a href="lending.html" class="btn btn-sm btn-outline-primary me-1">貸出</a>
+              <a href="book_form.html" class="btn btn-sm btn-outline-secondary">編集</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <a href="book_form.html" class="text-decoration-none text-dark fw-semibold">ONE PIECE (1)</a>
+            </td>
+            <td>尾田 栄一郎</td>
+            <td>1997</td>
+            <td><span class="badge bg-warning text-dark">貸出中</span></td>
+            <td>
+              <a href="return.html" class="btn btn-sm btn-outline-success me-1">返却</a>
+              <a href="book_form.html" class="btn btn-sm btn-outline-secondary">編集</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <a href="book_form.html" class="text-decoration-none text-dark fw-semibold">呪術廻戦 (1)</a>
+            </td>
+            <td>芥見 下々</td>
+            <td>2018</td>
+            <td><span class="badge bg-success">貸出可</span></td>
+            <td>
+              <a href="lending.html" class="btn btn-sm btn-outline-primary me-1">貸出</a>
+              <a href="book_form.html" class="btn btn-sm btn-outline-secondary">編集</a>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <a href="book_form.html" class="text-decoration-none text-dark fw-semibold">進撃の巨人 (1)</a>
+            </td>
+            <td>諫山 創</td>
+            <td>2009</td>
+            <td><span class="badge bg-warning text-dark">貸出中</span></td>
+            <td>
+              <a href="return.html" class="btn btn-sm btn-outline-success me-1">返却</a>
+              <a href="book_form.html" class="btn btn-sm btn-outline-secondary">編集</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav>
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a class="page-link" href="#">前へ</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">次へ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 書籍貸出管理システム</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>返却確認 – 書籍貸出管理</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container { max-width: 960px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">📚 書籍貸出管理</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="book_list.html">書籍一覧</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="login.html" class="btn btn-outline-light btn-sm">ログアウト</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4" style="max-width: 560px;">
+
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="book_list.html">書籍一覧</a></li>
+        <li class="breadcrumb-item active">返却手続き</li>
+      </ol>
+    </nav>
+
+    <h1 class="h3 mb-4">返却手続き</h1>
+
+    <!-- 対象書籍 -->
+    <div class="card bg-light border-0 mb-4">
+      <div class="card-body py-3">
+        <p class="text-muted mb-1" style="font-size: 0.8rem;">対象書籍</p>
+        <p class="fw-semibold mb-0">ONE PIECE (1) <span class="text-muted fw-normal">／ 尾田 栄一郎</span></p>
+      </div>
+    </div>
+
+    <!-- 貸出情報（読み取り専用） -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-body p-4">
+        <h2 class="h6 text-muted mb-3">貸出情報</h2>
+        <dl class="row mb-0">
+          <dt class="col-5 fw-normal text-muted">借りた人</dt>
+          <dd class="col-7 mb-2">鈴木 花子</dd>
+          <dt class="col-5 fw-normal text-muted">貸出日</dt>
+          <dd class="col-7 mb-2">2025年5月10日</dd>
+          <dt class="col-5 fw-normal text-muted">返却予定日</dt>
+          <dd class="col-7 mb-0">
+            2025年5月24日
+            <span class="badge bg-danger ms-1">延滞中</span>
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="d-flex gap-2">
+      <a href="book_list.html" class="btn btn-success">返却を確定する</a>
+      <a href="book_list.html" class="btn btn-outline-secondary">キャンセル</a>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 書籍貸出管理システム</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
